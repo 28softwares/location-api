@@ -73,6 +73,14 @@ class ProvinceService {
     console.log(data);
     return data;
   }
+
+  getProvincecount() {
+    const data = this.db.prepare(
+      `SELECT COUNT(*) AS province_count FROM province;
+`
+    );
+    return data;
+  }
 }
 
 export default new ProvinceService();

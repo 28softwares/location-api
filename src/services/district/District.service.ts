@@ -55,6 +55,13 @@ class DistrictService {
     console.log(data);
     return data;
   }
+
+  getDistrictcount() {
+    const data = this.db.prepare(
+      `SELECT COUNT(*) AS district_count FROM district`
+    );
+    return data;
+  }
 }
 
 export default new DistrictService();

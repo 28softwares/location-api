@@ -15,7 +15,8 @@ const setAllProvinceRoutes = (elysia: Elysia) => {
     )
     .get("/provinces/:id/wards", ({ params: { id } }) =>
       ProvinceService.getWardByProvinceId(id)
-    );
+    )
+    .get("/provinces/count", ProvinceService.getProvincecount());
 };
 
 export default setAllProvinceRoutes;
