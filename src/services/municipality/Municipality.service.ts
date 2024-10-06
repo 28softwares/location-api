@@ -39,5 +39,12 @@ class MunicipalityService {
     console.log(data);
     return data;
   }
+
+  getMunicipalitycount() {
+    const data = this.db.prepare(
+      `SELECT COUNT(*) AS municipality_count FROM municipality`
+    );
+    return data;
+  }
 }
 export default new MunicipalityService();
